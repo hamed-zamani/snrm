@@ -17,3 +17,5 @@ If you find this model useful, you may want to cite the SNRM paper published at 
 
 [2] Mostafa Dehghani, Hamed Zamani, Aliaksei Severyn, Jaap Kamps, and W. Bruce Croft. "Neural Ranking Models with Weak Supervision", In Proc. of SIGIR 2017.
 
+# Author
+This project was implemented by [Hamed Zamani](http://hamedz.ir/) of the [Center for Intelligent Information Retrieval (CIIR)](http://ciir.cs.umass.edu/) at the University of Massachusetts Amherst. If you have any comment or question, please do not hesitate to contact the author via <zamani@cs.umass.edu>.
