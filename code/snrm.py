@@ -115,10 +115,10 @@ class SNRM(object):
             self.cost = self.loss + (tf.constant(self.regularization_term, dtype=tf.float32) * self.l1_regularization)
 
             # computing the l0 losses for visualization purposes.
-            l0_regularization_docs = tf.cast(tf.count_nonzero(tf.concat([d1_repr, d2_repr], axis=1)), tf.float32) \
+            l0_regularization_docs = tf.cast(tf.count_nonzero(tf.concat([self.d1_repr, self.d2_repr], axis=1)), tf.float32) \
                                      / tf.constant(2 * self.batch_size, dtype=tf.float32)
 
-            l0_regularization_query = tf.cast(tf.count_nonzero(q_repr), tf.float32) \
+            l0_regularization_query = tf.cast(tf.count_nonzero(self.q_repr), tf.float32) \
                                       / tf.constant(self.batch_size, dtype=tf.float32)
 
             # the Adam optimizer for training.
