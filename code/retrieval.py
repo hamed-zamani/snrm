@@ -67,4 +67,4 @@ with tf.Session(graph=snrm.graph) as session:
                     retrieval_scores[did] += query_repr[0][i] * weight
 
         result[qid] = sorted(retrieval_scores.items(), key=lambda x: x[1])
-    pkl.dump(result, open(FLAGS.base_path + FLAGS.result_path + FLAGS.run_name + '-test-queries.pkl'))
+    pkl.dump(result, open(FLAGS.base_path + FLAGS.result_path + FLAGS.run_name + '-test-queries.pkl', 'rb'))

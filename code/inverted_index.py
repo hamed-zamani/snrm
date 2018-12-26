@@ -27,10 +27,10 @@ class InMemoryInvertedIndex(InvertedIndex):
                 if doc_repr[i][j] > 0.:
                     if j not in self.index:
                         self.index[j] = []
-                    self.index[j].add((doc_ids[i], doc_repr[i][j]))
+                    self.index[j].append((doc_ids[i], doc_repr[i][j]))
 
     def store(self, index_path):
         pkl.dump(self.index, open(index_path, 'wb'))
 
     def load(self, index_path):
-        self.index = pkl.load(open(index_path))
+        self.index = pkl.load(open(index_path, 'rb'))
